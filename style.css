@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+}
+
+body {
+    font-family: 'Nanito Sans', sans-serif;
+    background-color: rgb(186, 210, 255);
+}
+
+
+header {
+    color: white;
+    background-color: rgb(62, 63, 149);
+    padding: 10px;
+    text-align: center;
+    border-radius: 0px;
+}
+
+main {
+    padding: 30px 50px;
+}
+
+.titleII {
+    color: white;
+    background-color: rgb(20, 20, 26);
+    padding: 10px;
+    text-align: center;
+    font: bold 25px Consolas;
+    border-radius: 0px;
+}
+
+.lista {
+    color: rgb(20, 20, 26);
+    background-color: white;
+    font: bold 30px Consolas;
+    padding: 10px;
+    text-align: center;
+}
+
+.lineLbl {
+    color: white;
+    background-color: rgb(62, 63, 149);
+    padding: 20px;
+    text-align: center;
+    font: italic 20px Consolas;
+    margin: 0%;
+    border-radius: 8px;
+}
+
+.formControl {
+    color: rgb(19, 18, 18);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    font: italic 17px Consolas;
+    margin: 10px;
+    border-radius: 8px;
+    outline: 0;
+}
+
+.lineBt {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
