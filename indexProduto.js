@@ -24,6 +24,35 @@ function atualizarProdutos() {
         })
 }
 
+atualizarMaterias()
+
+function atualizarMaterias() {
+    document.getElementById('listaMaterias').innerHTML = ''
+    const materias = fetch('http://localhost:3000/materias-primas')
+        .then(resposta => resposta.json())
+        .then(materias => {   
+            materias.forEach(materia => {
+                const li = document.createElement('li')
+                li.textContent = `${materia.desc} - ${materia.dimensoes}`
+
+                const botaoAdicionar = document.createElement('button')
+                botaoAdicionar.textContent = 'Adicionar'
+                botaoAdicionar.className = 'btn btn-danger m-1'
+                botaoAdicionar.addEventListener('click', () => adcQuantidade(materia.cod))
+                li.appendChild(botaoAdicionar)
+
+                document.getElementById('listaMaterias').appendChild(li)
+            })
+        })
+}
+
+function adcQuantidade(codMateria){
+ //   const txtQnt = document.createElement('placeholder')
+  //  txtQnt.className = 'form-control'
+}
+
+
+
 function showProduto(produto) {
     document.getElementById('descUpdate').value = produto.desc
     document.getElementById('desenhoUpdate').value = produto.desenho
