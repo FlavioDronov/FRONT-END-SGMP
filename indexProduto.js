@@ -26,7 +26,7 @@ function atualizarProdutos() {
 
 function showProduto(produto) {
     document.getElementById('descUpdate').value = produto.desc
-    document.getElementById('dimensoesUpdate').value = produto.dimensoes
+    document.getElementById('desenhoUpdate').value = produto.desenho
     document.getElementById('codUpdate').value = produto.cod
     document.getElementById('btnUpdate').disabled = false
 }
