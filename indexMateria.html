@@ -11,8 +11,11 @@
 
 <body>
     <div class="container">
-        <h1 class="h1">Cadastro de Materias Primas</h1>
-        <form id="formCadastro">
+        <h1 class="title">SGMP - Sistema de Gestão de Matéria Prima</h1>
+        <h2 class="titleII">ABC - Materiais</h2>
+        <label class="titleIII" for="lista">Cadastrar Materiais</label>
+
+    <form id="formCadastro">
             <label for="desc">Descricao:</label>
             <input type="text" name="desc" id="desc" class="form-control">
             <label for="dimensoes">Dimensoes:</label>
@@ -31,6 +34,7 @@
             <input type="text" name="dimensoes" id="dimensoesUpdate" class="form-control">
             <input type="hidden" name="cod" id="codUpdate">
             <input type="submit" id="btnUpdate" disabled value="Atualizar" class="btn btn-primary mt-2">
+        
         </form>
     </div>
     <script src="indexMateria.js"></script>

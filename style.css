@@ -31,20 +31,19 @@ header {
 
 .titleIII {
     color: rgb(225, 225, 231);
-background-color: rgb(62, 63, 149);
+    background-color: rgb(62, 63, 149);
 
-font: bold 3vh Consolas;
-text-align: center;
+    font: bold 3vh Consolas;
+    text-align: center;
 
-padding: 10px;
-border-radius: 8px;
+    padding: 10px;
+    border-radius: 8px;
 
-margin-top: 1vh;
-margin-bottom: 1vh;
-padding-left: 30vh;
-padding-right: 30vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding-left: 40%;
+    padding-right: 40%;
 }
-
 
 .lineLbl {
     background-color: #3e3f95ff;
