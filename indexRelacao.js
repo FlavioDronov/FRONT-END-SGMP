@@ -36,14 +36,14 @@ document.querySelector("#formConfirmar").addEventListener("submit", function (ev
     event.preventDefault()
     confirmar(event)
 })
-function confirmar(form) {
-    const selectP = document.querySelector('#listaProdutos')
-    const optionValueP = selectP.options[selectP.selectedIndex]
-    const valueP = optionValueP.value
+    function confirmar(form) {
+        const selectP = document.querySelector('#listaProdutos')
+        const optionValueP = selectP.options[selectP.selectedIndex]
+        const valueP = optionValueP.value
 
-    const selectM = document.querySelector('#listaMaterias')
-    const optionValueM = selectM.options[selectM.selectedIndex]
-    const valueM = optionValueM.value
-    const q =  document.getElementById('quantidade').value
-    alert(`${q} - ${valueM} e ${valueP}`)
+        const selectM = document.querySelector('#listaMaterias')
+        const optionValueM = selectM.options[selectM.selectedIndex]
+        const valueM = optionValueM.value
+        const q =  document.getElementById('quantidade').value
+        alert(`${q} - ${valueM} e ${valueP}`)
 }
