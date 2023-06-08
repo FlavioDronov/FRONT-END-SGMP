@@ -24,7 +24,6 @@ function atualizarProdutos() {
         })
 }
 
-
 function showProduto(produto) {
     document.getElementById('descUpdate').value = produto.desc
     document.getElementById('desenhoUpdate').value = produto.desenho
