@@ -45,5 +45,25 @@ document.querySelector("#formConfirmar").addEventListener("submit", function (ev
         const optionValueM = selectM.options[selectM.selectedIndex]
         const valueM = optionValueM.value
         const q =  document.getElementById('quantidade').value
-        alert(`${q} - ${valueM} e ${valueP}`)
+        vincular(q, valueM, valueP)
+        document.getElementById('quantidade').value = ""
+}
+
+function vincular(q, valueM, valueP) {
+    const vinculo = {
+        quantidade: q,
+        materiumCod: valueM,
+        produtoCod: valueP
+    }
+
+    fetch('http://localhost:3000/prod-mp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(vinculo)
+    }).then(resposta => {
+        if (resposta.status != 200 && resposta.status != 201) {
+            alert('Erro ao vincular materia e produto!')
+        }
+        alert('Materia e produto vinculados com sucesso!')
+    })
 }
