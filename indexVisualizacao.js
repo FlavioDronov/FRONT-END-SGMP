@@ -8,17 +8,20 @@ function atualizarMaterias(cod) {
             produtos.forEach(produto => {
                 const codm = produto.produto_materiaPrima.materiumCod
                 const quant = produto.produto_materiaPrima.quantidade
-                const materias = fetch(`http://localhost:3000/materias-primas/${codm}`)
-                    then(resposta => resposta.json())
-                    .then(materias => {   
-                    materias.forEach(materia => {
-                    const li = document.createElement('li')
-                    li.textContent = `${materia.desc} - ${materia.dimensoes}: ${quant}`
 
-                document.getElementById('listaMaterias').appendChild(li)
-            })})
+                const materias = fetch(`http://localhost:3000/materias-primas/${codm}`)
+                    .then(resp => resp.json())
+                    .then(materias => {   
+                        materias.forEach(materia => {
+                            const li = document.createElement('li')
+                            li.textContent = `${materia.desc} - ${materia.dimensoes}: ${quant}`
+
+                            document.getElementById('listaMaterias').appendChild(li)
+                        })
+                    })
+            })
         })
-})}
+}
 
 function atualizarSelect() {
     document.getElementById('selectProduto').innerHTML = ''
@@ -44,10 +47,10 @@ document.querySelector("#formConfirmar").addEventListener("submit", function (ev
     event.preventDefault()
     confirmar(event)
 })
-    function confirmar(form) {
-        const selectP = document.querySelector('#selectProduto')
-        const optionValueP = selectP.options[selectP.selectedIndex]
-        printarProduto(optionValueP.textContent)  
-        atualizarMaterias(optionValueP.value) 
+function confirmar(form) {
+    const selectP = document.querySelector('#selectProduto')
+    const optionValueP = selectP.options[selectP.selectedIndex]
+    printarProduto(optionValueP.textContent)  
+    atualizarMaterias(optionValueP.value) 
 }
 
