@@ -35,18 +35,9 @@ function atualizarSelect() {
         })
 }
 
-function printarProduto(cod) {
-    document.getElementById('listaProduto').innerHTML = ''
-    const produtos = fetch(`http://localhost:3000/produtos/${cod}`)
-        .then(resposta => resposta.json())
-        .then(produtos => {   
-            produtos.forEach(produto => {
-                const li = document.createElement('li')
-                li.textContent = `${produto.desc} - ${produto.desenho}`
-
-                document.getElementById('listaProduto').appendChild(li)
-            })
-        })
+function printarProduto(selected) {
+    const prod = document.getElementById("prod")
+    prod.textContent = `${selected}`
 }
 
 document.querySelector("#formConfirmar").addEventListener("submit", function (event) {
@@ -56,8 +47,7 @@ document.querySelector("#formConfirmar").addEventListener("submit", function (ev
     function confirmar(form) {
         const selectP = document.querySelector('#selectProduto')
         const optionValueP = selectP.options[selectP.selectedIndex]
-        const valueP = optionValueP.value
-        printarProduto(valueP)  
-        atualizarMaterias(valueP) 
+        printarProduto(optionValueP.textContent)  
+        atualizarMaterias(optionValueP.value) 
 }
 
