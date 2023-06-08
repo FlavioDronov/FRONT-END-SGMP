@@ -1,9 +1,5 @@
 atualizarSelect()
 
-function vinculo() {
-    
-}
-
 function atualizarMaterias(cod) {
     document.getElementById('listaMaterias').innerHTML = ''
     const produtos = fetch(`http://localhost:3000/prod-mp/${cod}`)
